@@ -1,5 +1,8 @@
 package com.company;
 
+import java.util.Random;
+
+
 public class Bread {
 
     private String rye;
@@ -8,6 +11,7 @@ public class Bread {
     private String honeyWheat;
     private String focaccia;
     private String sourDough;
+    private String randomChoice;
 
     //constructor for bread
 
@@ -18,12 +22,23 @@ public class Bread {
         this.honeyWheat = honeyWheat;
         this.focaccia = focaccia;
         this.sourDough = sourDough;
+
+        this.randomChoice = pickRandomBread();
     }
 
-    //we also need to be able to choose from a list--create a list for the user to see
+    //we need to be able to choose from a list--create a list for the user to see
 
 
     //we need to be able to randomly choose a type of bread--random generator
+    public String pickRandomBread(){
+        final String[] breadChoices = {"Rye", "WholeWheat", "White", "Honey Wheat", "Focaccia", "SourDough"};
+        Random random = new Random();
+        int index = random.nextInt(breadChoices.length);
+        System.out.println(breadChoices[index]);
+
+        return new String(String.valueOf(index));
+    }
+
 
 
 
