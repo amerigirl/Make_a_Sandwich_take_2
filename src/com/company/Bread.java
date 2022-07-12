@@ -23,7 +23,7 @@ public class Bread {
         this.focaccia = focaccia;
         this.sourDough = sourDough;
 
-        this.randomChoice = pickRandomBread();
+//        this.randomChoice = pickRandomBread();--didn't need to add it to the constructor; just call an instance of the class
     }
 
     //we need to be able to choose from a list--create a list for the user to see
@@ -32,8 +32,8 @@ public class Bread {
     //we need to be able to randomly choose a type of bread--random generator
     public String pickRandomBread(){
         final String[] breadChoices = {"Rye", "WholeWheat", "White", "Honey Wheat", "Focaccia", "SourDough"};
-        Random random = new Random();
-        int index = random.nextInt(breadChoices.length);
+        Random randomPick = new Random();
+        int index = randomPick.nextInt(breadChoices.length);
         System.out.println(breadChoices[index]);
 
         return new String(String.valueOf(index));
