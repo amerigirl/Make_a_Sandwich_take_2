@@ -15,6 +15,8 @@ public class Bread {
     private String sourDough;
     private String randomChoice;
 
+    ArrayList finalBreadChoice = new ArrayList<>(); //this might have to be in it's own class so ALL the classes have access to add something to it.
+
     //constructor for bread
 
     public Bread(String rye, String wholeWheat, String white, String honeyWheat, String focaccia, String sourDough){
@@ -25,10 +27,9 @@ public class Bread {
         this.focaccia = focaccia;
         this.sourDough = sourDough;
 
-//  this.randomChoice = pickRandomBread();--didn't need to add it to the constructor; just call an instance of the class
     }
 
-    //we need to be able to choose from a list--create a list for the user to see (then add all the choices into an array or something)
+    //create a list for the user to see (then add all the choices into an array or something)
 
     public void showBreadMenu(){
 
@@ -49,6 +50,7 @@ public class Bread {
         System.out.println("G. Random Choice");
         System.out.println("H. Exit");
 
+
         //conditional to cycle through the choices
 
         System.out.println("======================================================");
@@ -56,7 +58,6 @@ public class Bread {
         System.out.println("======================================================");
 
         char userChoice = scanner.next().toUpperCase().charAt(0);
-        ArrayList finalBreadChoice = new ArrayList<>();
 
         if (userChoice == 'A') {
             System.out.println("\nGreat, Rye is one of my favs :-) \nLet's add some protein to this!");
@@ -84,11 +85,9 @@ public class Bread {
 
         } else if (userChoice == 'G') {
 
-            System.out.println(finalBreadChoice.add(pickRandomBread());
-
+            String randomSelection = pickRandomBread();
             System.out.println("\nLet's add some protein to this!");
-
-
+            finalBreadChoice.add(randomSelection);
         } else {
             System.out.println("See you next time your stomach growls :)");
 
@@ -102,7 +101,8 @@ public class Bread {
         final String[] breadChoices = {"Rye", "Whole Wheat", "White", "Honey Wheat", "Focaccia", "SourDough"};
         Random randomPick = new Random();
         int index = randomPick.nextInt(breadChoices.length);
-        //System.out.println(breadChoices[index]);
+        finalBreadChoice.add(index); //so it's adding a number to the arrayList and not the string
+        System.out.println(breadChoices[index]);
 
         return breadChoices[index];
     }
