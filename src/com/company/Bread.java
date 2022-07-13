@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -29,7 +30,7 @@ public class Bread {
 
     //we need to be able to choose from a list--create a list for the user to see (then add all the choices into an array or something)
 
-    public void showMenu(){
+    public void showBreadMenu(){
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("\n\n===========================================================================");
@@ -55,26 +56,44 @@ public class Bread {
         System.out.println("======================================================");
 
         char userChoice = scanner.next().toUpperCase().charAt(0);
+        ArrayList finalBreadChoice = new ArrayList<>();
 
         if (userChoice == 'A') {
             System.out.println("\nGreat, Rye is one of my favs :-) \nLet's add some protein to this!");
+            finalBreadChoice.add("Rye");
+
         } else if (userChoice == 'B') {
             System.out.println("Whole wheat, a nice healthy choice! \nLet's add some protein to this!");
+            finalBreadChoice.add("Whole Wheat");
+
         } else if (userChoice == 'C') {
             System.out.println("White--a classically awesome choice! \nLet's add some protein to this!\"");
+            finalBreadChoice.add("White");
+
         } else if (userChoice == 'D') {
             System.out.println("Honey wheat, such a sweet and healthy treat! \nLet's add some protein to this!");
+            finalBreadChoice.add("Honey Wheat");
+
         } else if (userChoice == 'E') {
             System.out.println("Focaccia--so fancy! \nLet's add some protein to this!");
+            finalBreadChoice.add("Focaccia");
+
         } else if (userChoice == 'F') {
             System.out.println("SourDough is one of my favs! \nLet's add some protein to this!");
+            finalBreadChoice.add("SourDough");
+
         } else if (userChoice == 'G') {
-            pickRandomBread();
+
+            System.out.println(finalBreadChoice.add(pickRandomBread());
+
             System.out.println("\nLet's add some protein to this!");
+
+
         } else {
             System.out.println("See you next time your stomach growls :)");
-        }
 
+        }
+        System.out.println(finalBreadChoice);
     }
 
 
@@ -83,9 +102,9 @@ public class Bread {
         final String[] breadChoices = {"Rye", "Whole Wheat", "White", "Honey Wheat", "Focaccia", "SourDough"};
         Random randomPick = new Random();
         int index = randomPick.nextInt(breadChoices.length);
-        System.out.println(breadChoices[index]);
+        //System.out.println(breadChoices[index]);
 
-        return String.valueOf(index);
+        return breadChoices[index];
     }
 
 
