@@ -6,7 +6,7 @@ public class Main {
 
 Bread sampleBread = new Bread("rye", "wholeWheat", "white", "honeyWheat", "focacia", "sourDough");
 
-sampleBread.pickRandomBread();
+
 	// this is where we'll build the sandwich
     }
 }

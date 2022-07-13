@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.Random;
+import java.util.Scanner;
 
 
 public class Bread {
@@ -26,7 +27,28 @@ public class Bread {
 //        this.randomChoice = pickRandomBread();--didn't need to add it to the constructor; just call an instance of the class
     }
 
-    //we need to be able to choose from a list--create a list for the user to see
+    //we need to be able to choose from a list--create a list for the user to see (then add all the choices into an array or something)
+
+    public void showMenu(){
+    char option = '\0';
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("\n\nHello and welcome to McKerracher's Kitchen. Now, let's make a sandwich :)" +
+                "\n1. Choose your type of bread: ");
+        System.out.println("\n");
+        System.out.println("A. Rye");
+        System.out.println("B. Whole Wheat");
+        System.out.println("C. White");
+        System.out.println("D. Honey Wheat");
+        System.out.println("E. Focaccia");
+        System.out.println("F. SourDough");
+        System.out.println("G. Random Choice");
+
+
+
+
+
+    }
 
 
     //we need to be able to randomly choose a type of bread--random generator
