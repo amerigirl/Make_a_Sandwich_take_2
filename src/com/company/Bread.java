@@ -24,13 +24,12 @@ public class Bread {
         this.focaccia = focaccia;
         this.sourDough = sourDough;
 
-//        this.randomChoice = pickRandomBread();--didn't need to add it to the constructor; just call an instance of the class
+//  this.randomChoice = pickRandomBread();--didn't need to add it to the constructor; just call an instance of the class
     }
 
     //we need to be able to choose from a list--create a list for the user to see (then add all the choices into an array or something)
 
     public void showMenu(){
-    char option = '\0';
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("\n\n===========================================================================");
@@ -49,21 +48,44 @@ public class Bread {
         System.out.println("G. Random Choice");
         System.out.println("H. Exit");
 
+        //conditional to cycle through the choices
 
+        System.out.println("======================================================");
+        System.out.println("Enter an option above to get started: ");
+        System.out.println("======================================================");
 
+        char userChoice = scanner.next().toUpperCase().charAt(0);
 
+        if (userChoice == 'A') {
+            System.out.println("\nGreat, Rye is one of my favs :-) \nLet's add some protein to this!");
+        } else if (userChoice == 'B') {
+            System.out.println("Whole wheat, a nice healthy choice! \nLet's add some protein to this!");
+        } else if (userChoice == 'C') {
+            System.out.println("White--a classically awesome choice! \nLet's add some protein to this!\"");
+        } else if (userChoice == 'D') {
+            System.out.println("Honey wheat, such a sweet and healthy treat! \nLet's add some protein to this!");
+        } else if (userChoice == 'E') {
+            System.out.println("Focaccia--so fancy! \nLet's add some protein to this!");
+        } else if (userChoice == 'F') {
+            System.out.println("SourDough is one of my favs! \nLet's add some protein to this!");
+        } else if (userChoice == 'G') {
+            pickRandomBread();
+            System.out.println("\nLet's add some protein to this!");
+        } else {
+            System.out.println("See you next time your stomach growls :)");
+        }
 
     }
 
 
     //we need to be able to randomly choose a type of bread--random generator
     public String pickRandomBread(){
-        final String[] breadChoices = {"Rye", "WholeWheat", "White", "Honey Wheat", "Focaccia", "SourDough"};
+        final String[] breadChoices = {"Rye", "Whole Wheat", "White", "Honey Wheat", "Focaccia", "SourDough"};
         Random randomPick = new Random();
         int index = randomPick.nextInt(breadChoices.length);
         System.out.println(breadChoices[index]);
 
-        return new String(String.valueOf(index));
+        return String.valueOf(index);
     }
 
 
