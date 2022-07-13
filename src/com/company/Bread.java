@@ -33,8 +33,12 @@ public class Bread {
     char option = '\0';
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("\n\nHello and welcome to McKerracher's Kitchen. Now, let's make a sandwich :)" +
-                "\n1. Choose your type of bread: ");
+        System.out.println("\n\n===========================================================================");
+        System.out.println("               Let's Make A Sandwich Together                         ");
+        System.out.println("===========================================================================");
+
+        System.out.println("\n Hello and welcome to McKerracher's Kitchen! Now, let's make a sandwich :)" +
+                "\n We'll start by having you choose your type of bread. Type the letter of the bread you'd like: ");
         System.out.println("\n");
         System.out.println("A. Rye");
         System.out.println("B. Whole Wheat");
@@ -43,6 +47,7 @@ public class Bread {
         System.out.println("E. Focaccia");
         System.out.println("F. SourDough");
         System.out.println("G. Random Choice");
+        System.out.println("H. Exit");
 
 
 
