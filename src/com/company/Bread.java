@@ -46,7 +46,7 @@ public class Bread {
         Scanner scanner = new Scanner(System.in);
         System.out.println("\n\n===========================================================================");
         System.out.println("               Bread: The Choice That Matters Most                        ");
-        System.out.println("===========================================================================");
+        System.out.println("===============================================================================");
 
         System.out.println("\n Sure, meat tends to be king in a sandwich, but really, bread is the star of the show!" +
                 "\n Type the letter of the bread you'd like: ");
@@ -61,10 +61,10 @@ public class Bread {
         System.out.println("H. Exit");
 
 
-        //conditional to cycle through the choices
-        System.out.println("======================================================");
-        System.out.println("Enter an option above to get started: ");
-        System.out.println("======================================================");
+        //conditional to cycle through the choices--only one choice per sandwich
+        System.out.println("=======================================================================");
+        System.out.println("Enter an option above to get started (one choice per sandwich): ");
+        System.out.println("=======================================================================");
 
         char userBreadChoice = scanner.next().toUpperCase().charAt(0);
 

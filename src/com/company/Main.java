@@ -9,7 +9,7 @@ public class Main {
 Bread sampleBread = new Bread("rye", "wholeWheat", "white", "honeyWheat", "focacia", "sourDough");
 Cheese sampleCheese = new Cheese("americanCheddar", "provlone", "swiss", "smokedGouda", "mozzarella", "honeyGoatCheese");
 
-//sampleBread.showBreadMenu();
+sampleBread.showBreadMenu();
 sampleCheese.showCheeseMenu();
 
     }

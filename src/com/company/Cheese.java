@@ -41,7 +41,6 @@ public class Cheese {
     }
 
 
-
     public void showCheeseMenu(){
 
         Scanner scanner = new Scanner(System.in);
@@ -62,9 +61,9 @@ public class Cheese {
 
 
         //conditional to cycle through the choices
-        System.out.println("======================================================");
-        System.out.println("Enter an option above to get started: ");
-        System.out.println("======================================================");
+        System.out.println("=======================================================================");
+        System.out.println("Enter an option above to get started (one choice per sandwich): ");
+        System.out.println("=======================================================================");
 
         char userCheeseChoice = scanner.next().toUpperCase().charAt(0);
 
