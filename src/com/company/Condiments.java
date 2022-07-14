@@ -25,11 +25,14 @@ public class Condiments {
 
     //we need to be able to randomly choose 3 condiments
     //we need a way to let users pick more than one in this case, right?  What about other cases?
+
     final String [] condimentChoices = {"Mayo", "Mustard", "Ranch", "Hot Sauce", "Cranberry Sauce"};
-    Random random = new Random();
+    Random randomCondiment = new Random();
+
     int n = 0;
     int e = 0;
 
+    int n = random.nextInt(condimentChoices.length - 2 + 1) + 2;
 
 
     String [] arr = {"A", "B", "C", "D"};
