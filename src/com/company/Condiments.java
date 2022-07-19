@@ -26,9 +26,9 @@ public class Condiments<n> {
 
     }
 
-
     //we need to be able to randomly choose 3 condiments
-    //we need a way to let users pick more than one in this case, right?  What about other cases?
+    //we need a way to let users pick more than one in this case, right?
+    //I don't know how to do this just yet
 
     public String pickRandomCondiments(){
 
@@ -41,7 +41,9 @@ public class Condiments<n> {
 
         for (int i = 0; i < n; n++) {
             e = random.nextInt(condimentChoices.length);
+
             System.out.println("Random string selected: " + condimentChoices[e]);
+            break;
         }
         return condimentChoices[e];
     }
@@ -93,14 +95,18 @@ public class Condiments<n> {
             finalCondimentChoice.add("Cranberry sauce");
 
         } else if (userCheeseChoice == 'F') {
+            String randomSelection = "";
             System.out.println("Yay! You hit the jackpot with: ");
-            String randomSelection = pickRandomCondiments();
+            String randomChoice = pickRandomCondiments();
+
             finalCondimentChoice.add(randomSelection);
+
 
         } else {
             System.out.println("See you next time your stomach growls :)");
 
         }
+
 
     }
 

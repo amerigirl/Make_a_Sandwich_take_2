@@ -10,10 +10,10 @@ Bread sampleBread = new Bread("rye", "wholeWheat", "white", "honeyWheat", "focac
 Cheese sampleCheese = new Cheese("americanCheddar", "provlone", "swiss", "smokedGouda", "mozzarella", "honeyGoatCheese");
 Condiments sampleRandom = new Condiments("mayo", "mustard","rance","hotSauce",  "cranberrySauce");
 
-
-sampleBread.showBreadMenu();
-sampleCheese.showCheeseMenu();
-
+//
+//sampleBread.showBreadMenu();
+//sampleCheese.showCheeseMenu();
+sampleRandom.showCondimentsMenu();
     }
 }
 
