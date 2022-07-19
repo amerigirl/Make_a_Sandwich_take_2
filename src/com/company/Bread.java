@@ -72,6 +72,7 @@ public class Bread {
             System.out.println("\nGreat, Rye is one of my favs :-) \nLet's add some cheese to this!");
             finalBreadChoice.add("Rye");
 
+
         } else if (userBreadChoice == 'B') {
             System.out.println("Whole wheat, a nice healthy choice! \nLet's add some cheese to this!");
             finalBreadChoice.add("Whole Wheat");
