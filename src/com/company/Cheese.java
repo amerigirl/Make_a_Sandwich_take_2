@@ -13,7 +13,7 @@ public class Cheese {
     String mozzarella;
     String honeyGoatCheese;
 
-    ArrayList finalCheeseChoice = new ArrayList<>();
+    private ArrayList finalCheeseChoice = new ArrayList<>();
 
 
     //constructor for cheese
@@ -102,5 +102,9 @@ public class Cheese {
 
         }
 
+    }
+
+    public ArrayList getFinalCheeseChoice() {
+        return finalCheeseChoice;
     }
 }

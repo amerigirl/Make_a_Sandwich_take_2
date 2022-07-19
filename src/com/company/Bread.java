@@ -14,7 +14,7 @@ public class Bread {
     private String focaccia;
     private String sourDough;
 
-    ArrayList finalBreadChoice = new ArrayList<>(); //this might have to be in it's own class so ALL the classes have access to add something to it.
+    private ArrayList finalBreadChoice = new ArrayList<>(); //this might have to be in it's own class so ALL the classes have access to add something to it.
 
 
     //constructor for bread
@@ -105,6 +105,7 @@ public class Bread {
             //System.out.println(finalBreadChoice); so, it's printing the index AND the random selection for G---is this ok? (probably not)
     }
 
-
-
+    public ArrayList getFinalBreadChoice() {
+        return finalBreadChoice;
+    }
 }

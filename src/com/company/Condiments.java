@@ -3,7 +3,6 @@ package com.company;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
-
 public class Condiments<n> {
 
     String mayo;
@@ -12,7 +11,7 @@ public class Condiments<n> {
     String hotSauce;
     String cranberrySauce;
 
-    ArrayList finalCondimentChoice = new ArrayList<>();
+    private ArrayList finalCondimentChoice = new ArrayList<>(); //does each choice HAVE to be in an arrayList, or can it be saved in a variable?
 
 
     //constructor for condiments
@@ -26,26 +25,17 @@ public class Condiments<n> {
 
     }
 
-    //we need to be able to randomly choose 3 condiments
-    //we need a way to let users pick more than one in this case, right?
-    //I don't know how to do this just yet
 
     public String pickRandomCondiments(){
 
         final String [] condimentChoices = {"Mayo", "Mustard", "Ranch", "Hot Sauce", "Cranberry Sauce"};
-        Random random = new Random();
-        int n = 0;
-        int e = 0;
+        Random randomPick = new Random();
+        int index = randomPick.nextInt(condimentChoices.length);
+        finalCondimentChoice.add(index); //user doesn't see this.  Adds final choice to the arrayList for building the sandwich
 
-        n = random.nextInt(condimentChoices.length - 2 + 1) + 2;
+        System.out.println(condimentChoices[index]);
 
-        for (int i = 0; i < n; n++) {
-            e = random.nextInt(condimentChoices.length);
-
-            System.out.println("Random string selected: " + condimentChoices[e]);
-            break;
-        }
-        return condimentChoices[e];
+        return condimentChoices[index];
     }
 
 
@@ -95,13 +85,22 @@ public class Condiments<n> {
             finalCondimentChoice.add("Cranberry sauce");
 
         } else if (userCheeseChoice == 'F') {
+
             String randomSelection = "";
-            System.out.println("Yay! You hit the jackpot with: ");
-            String randomChoice = pickRandomCondiments();
+            String randomSelection2= "";
+            String randomSelection3 = "";
+            System.out.println("Yay! You hit the jackpot with: " + "\n");
 
-            finalCondimentChoice.add(randomSelection);
+            //how do I stop the random selection from repeating?? (change in the randomCondiments method)
+            randomSelection = pickRandomCondiments();
+            randomSelection2 = pickRandomCondiments();
+            randomSelection3 = pickRandomCondiments();
 
+            String allChoices = randomSelection + "," + randomSelection2 + ", and " + randomSelection3; //this creates one field (instead of 3) so the choice is added to an arrayList
 
+            finalCondimentChoice.add(allChoices);
+
+            System.out.println(allChoices);
         } else {
             System.out.println("See you next time your stomach growls :)");
 
@@ -110,4 +109,7 @@ public class Condiments<n> {
 
     }
 
+    public ArrayList getFinalCondimentChoice() {
+        return finalCondimentChoice;
+    }
 }
