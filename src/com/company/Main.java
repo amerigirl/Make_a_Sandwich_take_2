@@ -8,6 +8,8 @@ public class Main {
 
 Bread sampleBread = new Bread("rye", "wholeWheat", "white", "honeyWheat", "focacia", "sourDough");
 Cheese sampleCheese = new Cheese("americanCheddar", "provlone", "swiss", "smokedGouda", "mozzarella", "honeyGoatCheese");
+Condiments sampleRandom = new Condiments("mayo", "mustard","rance","hotSauce",  "cranberrySauce");
+
 
 sampleBread.showBreadMenu();
 sampleCheese.showCheeseMenu();
