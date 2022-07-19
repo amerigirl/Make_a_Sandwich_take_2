@@ -6,14 +6,18 @@ public class Main {
 
     public static void main(String[] args) {
 
-Bread sampleBread = new Bread("rye", "wholeWheat", "white", "honeyWheat", "focacia", "sourDough");
-Cheese sampleCheese = new Cheese("americanCheddar", "provlone", "swiss", "smokedGouda", "mozzarella", "honeyGoatCheese");
-Condiments sampleRandom = new Condiments("mayo", "mustard","rance","hotSauce",  "cranberrySauce");
+//Bread sampleBread = new Bread("rye", "wholeWheat", "white", "honeyWheat", "focacia", "sourDough");
+//Cheese sampleCheese = new Cheese("americanCheddar", "provlone", "swiss", "smokedGouda", "mozzarella", "honeyGoatCheese");
+//Condiments sampleRandom = new Condiments("mayo", "mustard","rance","hotSauce",  "cranberrySauce");
 
-//
+Meat sampleMeat = new Meat("veggie meat", "salami", "turkey", "ham", "pastrami", "prosciutto", "roast beef");
+
+
+
+sampleMeat.showMeatsMenu();
 //sampleBread.showBreadMenu();
 //sampleCheese.showCheeseMenu();
-sampleRandom.showCondimentsMenu();
+//sampleRandom.showCondimentsMenu();
     }
 }
 

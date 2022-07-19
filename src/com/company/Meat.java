@@ -113,7 +113,7 @@ public class Meat {
             String allChoices = randomSelection + ", and " + randomSelection2;  //this creates one field (instead of 3) so the choice is added to an arrayList
             finalMeatChoices.add(allChoices);
 
-            System.out.println(allChoices);
+            //System.out.println(allChoices);
         } else {
             System.out.println("See you next time your stomach growls :)");
 

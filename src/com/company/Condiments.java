@@ -58,6 +58,7 @@ public class Condiments<n> {
 
 
         //conditional to cycle through the choices
+        //you STILL haven't figured out how to let the user choose more than one--but the random selection might give you a clue!
         System.out.println("=======================================================================");
         System.out.println("Enter an option above to get started (up to 3 choices): ");
         System.out.println("=======================================================================");
