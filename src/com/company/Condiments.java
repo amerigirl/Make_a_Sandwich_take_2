@@ -3,15 +3,17 @@ package com.company;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
-public class Condiments<n> {
 
-    private String mayo;
-    private String mustard;
-    private String ranch;
-    private String hotSauce;
-    private String cranberrySauce;
 
-    private ArrayList finalCondimentChoice = new ArrayList<>(); //does each choice HAVE to be in an arrayList, or can it be saved in a variable?
+public class Condiments {
+
+    private final String mayo;
+    private final String mustard;
+    private final String ranch;
+    private final String hotSauce;
+    private final String cranberrySauce;
+
+    private final ArrayList<Object> finalCondimentChoice = new ArrayList<>(); //does each choice HAVE to be in an arrayList, or can it be saved in a variable?
 
 
     //constructor for condiments

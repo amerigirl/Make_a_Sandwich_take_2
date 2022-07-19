@@ -6,14 +6,14 @@ import java.util.Scanner;
 
 public class Cheese {
 
-    private String americanCheddar;
-    private String provolone;
-    private String swiss;
-    private String smokedGouda;
-    private String mozzarella;
-    private String honeyGoatCheese;
+    private final String americanCheddar;
+    private final String provolone;
+    private final String swiss;
+    private final String smokedGouda;
+    private final String mozzarella;
+    private final String honeyGoatCheese;
 
-    private ArrayList finalCheeseChoice = new ArrayList<>();
+    private final ArrayList<Object> finalCheeseChoice = new ArrayList<>();
 
 
     //constructor for cheese

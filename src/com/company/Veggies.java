@@ -1,20 +1,19 @@
 package com.company;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Veggies {
 
-    private String icebergLettuce;
-    private String tomato;
-    private String spinach;
-    private String pickle;
-    private String redLeafLettuce;
-    private String onion;
+    private final String icebergLettuce;
+    private final String tomato;
+    private final String spinach;
+    private final String pickle;
+    private final String redLeafLettuce;
+    private final String onion;
 
-    private ArrayList finalVeggieChoices = new ArrayList<>();
+    private final ArrayList<Object> finalVeggieChoices = new ArrayList<>();
 
 
     //constructor for Veggies
@@ -90,9 +89,6 @@ public class Veggies {
             System.out.println("onions, the loud inclusion :)");
             System.out.println("onion");
 
-        } else if (userVeggieChoice == 'F') {
-            System.out.println("Roast Beef is always a safe choice :)");
-            finalVeggieChoices.add("roastBeef");
 
         } else if (userVeggieChoice == 'G') {
 
@@ -120,7 +116,6 @@ public class Veggies {
         }
 
     }
-
 
     public String getIcebergLettuce() {
         return icebergLettuce;

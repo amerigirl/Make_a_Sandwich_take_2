@@ -1,21 +1,20 @@
 package com.company;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Meat {
 
-    private String veggieMeat;
-    private String salami;
-    private String turkey;
-    private String ham;
-    private String pastrami;
-    private String prosciutto;
-    private String roastBeef;
+    private final String veggieMeat;
+    private final String salami;
+    private final String turkey;
+    private final String ham;
+    private final String pastrami;
+    private final String prosciutto;
+    private final String roastBeef;
 
-    private ArrayList finalMeatChoices = new ArrayList<>();
+    private final ArrayList<Object> finalMeatChoices = new ArrayList<>();
 
 
     //constructor for Meat

@@ -7,14 +7,14 @@ import java.util.Scanner;
 
 public class Bread {
 
-    private String rye;
-    private String wholeWheat;
-    private String white;
-    private String honeyWheat;
-    private String focaccia;
-    private String sourDough;
+    private final String rye;
+    private final String wholeWheat;
+    private final String white;
+    private final String honeyWheat;
+    private final String focaccia;
+    private final String sourDough;
 
-    private ArrayList finalBreadChoice = new ArrayList<>(); //this might have to be in it's own class so ALL the classes have access to add something to it.
+    private final ArrayList<Object> finalBreadChoice = new ArrayList<>(); //this might have to be in it's own class so ALL the classes have access to add something to it.
 
 
     //constructor for bread
