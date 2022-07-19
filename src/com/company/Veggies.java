@@ -55,7 +55,8 @@ public class Veggies {
         System.out.println("D. pickle");
         System.out.println("E. red leaf lettuce");
         System.out.println("F. onion");
-        System.out.println("G. Exit");
+        System.out.println("G. Random picks");
+        System.out.println("H. Exit");
 
 
         //conditional to cycle through the choices
@@ -66,23 +67,28 @@ public class Veggies {
         char userVeggieChoice = scanner.next().toUpperCase().charAt(0);
 
         if (userVeggieChoice == 'A') {
-            System.out.println("\n Clean protein!");
-            finalVeggieChoices.add("VeggieMeat");
+            System.out.println("\n Iceberg: the classic choice!");
+            finalVeggieChoices.add("iceberg lettuce");
 
         } else if (userVeggieChoice == 'B') {
-            System.out.println("You've got Salami!");
-            finalVeggieChoices.add("Salami");
+            System.out.println("tomato--is a sandwich really a sandwich without a tomato?");
+            finalVeggieChoices.add("tomato");
 
         } else if (userVeggieChoice == 'C') {
-            System.out.println("Turkey is in the sandwich!");
-            finalVeggieChoices.add("Turkey");
+            System.out.println("spinach: the new favorite sandwich addition!");
+            finalVeggieChoices.add("spinach");
 
         } else if (userVeggieChoice == 'D') {
-            System.out.println("Ham, a classic choice!");
-            finalVeggieChoices.add("ham");
+            System.out.println("pickles, they belong here!");
+            finalVeggieChoices.add("pickle");
 
-        } else if (userVeggieChoice == 'E') {
+        } else if (userVeggieChoice == 'E'){
+                System.out.println("Red leaf is my favorite. Great choice!");
+                finalVeggieChoices.add("red leaf lettuce");
 
+        } else if (userVeggieChoice == 'F') {
+            System.out.println("onions, the loud inclusion :)");
+            System.out.println("onion");
 
         } else if (userVeggieChoice == 'F') {
             System.out.println("Roast Beef is always a safe choice :)");
@@ -107,15 +113,13 @@ public class Veggies {
             String allChoices = randomSelection + "," + randomSelection2 + "," + randomSelection3 +  "," + randomSelection4 + ", and " + randomSelection5;  //this creates one field (instead of 3) so the choice is added to an arrayList
             finalVeggieChoices.add(allChoices);
 
-            System.out.println(allChoices);
+            //System.out.println(allChoices);
         } else {
             System.out.println("See you next time your stomach growls :)");
 
         }
 
-
     }
-
 
 
     public String getIcebergLettuce() {
