@@ -105,6 +105,30 @@ public class Bread {
             //System.out.println(finalBreadChoice); so, it's printing the index AND the random selection for G---is this ok? (probably not)
     }
 
+    public String getRye() {
+        return rye;
+    }
+
+    public String getWholeWheat() {
+        return wholeWheat;
+    }
+
+    public String getWhite() {
+        return white;
+    }
+
+    public String getHoneyWheat() {
+        return honeyWheat;
+    }
+
+    public String getFocaccia() {
+        return focaccia;
+    }
+
+    public String getSourDough() {
+        return sourDough;
+    }
+
     public ArrayList getFinalBreadChoice() {
         return finalBreadChoice;
     }

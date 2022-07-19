@@ -6,12 +6,12 @@ import java.util.Scanner;
 
 public class Cheese {
 
-    String americanCheddar;
-    String provolone;
-    String swiss;
-    String smokedGouda;
-    String mozzarella;
-    String honeyGoatCheese;
+    private String americanCheddar;
+    private String provolone;
+    private String swiss;
+    private String smokedGouda;
+    private String mozzarella;
+    private String honeyGoatCheese;
 
     private ArrayList finalCheeseChoice = new ArrayList<>();
 
@@ -102,6 +102,30 @@ public class Cheese {
 
         }
 
+    }
+
+    public String getAmericanCheddar() {
+        return americanCheddar;
+    }
+
+    public String getProvolone() {
+        return provolone;
+    }
+
+    public String getSwiss() {
+        return swiss;
+    }
+
+    public String getSmokedGouda() {
+        return smokedGouda;
+    }
+
+    public String getMozzarella() {
+        return mozzarella;
+    }
+
+    public String getHoneyGoatCheese() {
+        return honeyGoatCheese;
     }
 
     public ArrayList getFinalCheeseChoice() {

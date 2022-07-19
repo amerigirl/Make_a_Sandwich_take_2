@@ -5,11 +5,11 @@ import java.util.Random;
 import java.util.Scanner;
 public class Condiments<n> {
 
-    String mayo;
-    String mustard;
-    String ranch;
-    String hotSauce;
-    String cranberrySauce;
+    private String mayo;
+    private String mustard;
+    private String ranch;
+    private String hotSauce;
+    private String cranberrySauce;
 
     private ArrayList finalCondimentChoice = new ArrayList<>(); //does each choice HAVE to be in an arrayList, or can it be saved in a variable?
 
@@ -107,6 +107,26 @@ public class Condiments<n> {
         }
 
 
+    }
+
+    public String getMayo() {
+        return mayo;
+    }
+
+    public String getMustard() {
+        return mustard;
+    }
+
+    public String getRanch() {
+        return ranch;
+    }
+
+    public String getHotSauce() {
+        return hotSauce;
+    }
+
+    public String getCranberrySauce() {
+        return cranberrySauce;
     }
 
     public ArrayList getFinalCondimentChoice() {
