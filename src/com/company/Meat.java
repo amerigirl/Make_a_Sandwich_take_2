@@ -37,10 +37,22 @@ public class Meat {
         Random randomPick = new Random();
         int index = randomPick.nextInt(meatChoices.length);
         finalMeatChoices.add(index); //user doesn't see this.  Adds final choice to the arrayList for building the sandwich
-
         System.out.println(meatChoices[index]);
 
         return meatChoices[index];
+
+        //how do I stop the random selection from repeating?? (change in the randomCondiments method)
+        //possible solution: int count=0;
+        //List<Integer> list=new ArrayList<Integer>();
+        //    while(count<50){
+        //        int num=random.nextInt(50);
+        //            if(!list.contains(num)){
+        //                list.add(num);
+        //                ++count;
+        //            }
+        //    }
+
+        //https://stackoverflow.com/questions/16284894/java-random-generator-without-repeat
     }
 
     public void showMeatsMenu(){
@@ -105,7 +117,8 @@ public class Meat {
 
             System.out.println("Yay! You hit the jackpot with: " + "\n");
 
-            //how do I stop the random selection from repeating?? (change in the randomCondiments method)
+
+
             randomSelection = pickRandomMeats();
             randomSelection2 = pickRandomMeats();
 
