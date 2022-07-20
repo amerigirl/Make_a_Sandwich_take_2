@@ -28,6 +28,7 @@ public class Veggies {
 
     }
 
+    //random veggie choice
     public String pickRandomVeggies() {
     final String[] veggieChoices = {"iceberg lettuce", "tomato", "spinach", "pickle", "red leaf lettuce", "onion"};
     Random randomPick = new Random();
@@ -39,6 +40,8 @@ public class Veggies {
 
 }
 
+
+    //veggies menu for the user
     public void showVeggiesMenu(){
 
         Scanner scanner = new Scanner(System.in);
@@ -67,27 +70,27 @@ public class Veggies {
 
         if (userVeggieChoice == 'A') {
             System.out.println("\n Iceberg: the classic choice!");
-            finalVeggieChoices.add("iceberg lettuce");
+            finalVeggieChoices.add("Iceberg Lettuce");
 
         } else if (userVeggieChoice == 'B') {
             System.out.println("tomato--is a sandwich really a sandwich without a tomato?");
-            finalVeggieChoices.add("tomato");
+            finalVeggieChoices.add("Tomato");
 
         } else if (userVeggieChoice == 'C') {
             System.out.println("spinach: the new favorite sandwich addition!");
-            finalVeggieChoices.add("spinach");
+            finalVeggieChoices.add("Spinach");
 
         } else if (userVeggieChoice == 'D') {
             System.out.println("pickles, they belong here!");
-            finalVeggieChoices.add("pickle");
+            finalVeggieChoices.add("Pickle");
 
         } else if (userVeggieChoice == 'E'){
                 System.out.println("Red leaf is my favorite. Great choice!");
-                finalVeggieChoices.add("red leaf lettuce");
+                finalVeggieChoices.add("Red Leaf Lettuce");
 
         } else if (userVeggieChoice == 'F') {
             System.out.println("onions, the loud inclusion :)");
-            System.out.println("onion");
+            System.out.println("Onion");
 
 
         } else if (userVeggieChoice == 'G') {
@@ -117,30 +120,8 @@ public class Veggies {
 
     }
 
-    public String getIcebergLettuce() {
-        return icebergLettuce;
-    }
 
-    public String getTomato() {
-        return tomato;
-    }
-
-    public String getSpinach() {
-        return spinach;
-    }
-
-    public String getPickle() {
-        return pickle;
-    }
-
-    public String getRedLeafLettuce() {
-        return redLeafLettuce;
-    }
-
-    public String getOnion() {
-        return onion;
-    }
-
+    //getter
     public ArrayList getFinalVeggieChoices() {
         return finalVeggieChoices;
     }

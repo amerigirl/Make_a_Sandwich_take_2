@@ -14,10 +14,9 @@ public class Bread {
     private final String focaccia;
     private final String sourDough;
 
-    private final ArrayList<Object> finalBreadChoice = new ArrayList<>(); //this might have to be in it's own class so ALL the classes have access to add something to it.
+    private final ArrayList<Object> finalBreadChoice = new ArrayList<>(); //this is where the user's final choice will live
 
-
-    //constructor for bread
+    //constructor for bread class
     public Bread(String rye, String wholeWheat, String white, String honeyWheat, String focaccia, String sourDough){
         this.rye = rye;
         this.wholeWheat = wholeWheat;
@@ -28,7 +27,7 @@ public class Bread {
 
     }
 
-    //we need to be able to randomly choose a type of bread--random generator
+    //we need our user to be able to randomly choose a type of bread
     public String pickRandomBread(){
         final String[] breadChoices = {"Rye", "Whole Wheat", "White", "Honey Wheat", "Focaccia", "SourDough"};
         Random randomPick = new Random();
@@ -40,7 +39,7 @@ public class Bread {
     }
 
 
-    //create a list for the user to see (then add all the choices into an array or something)
+    //create a Menu for the user to see and choose from
     public void showBreadMenu(){
 
         Scanner scanner = new Scanner(System.in);
@@ -97,39 +96,17 @@ public class Bread {
 
             System.out.println("Yay! You hit the jackpot with: ");
             String randomSelection = pickRandomBread();
-            System.out.println("\nLet's add some cheese to this!");
+                System.out.println("\nLet's add some cheese to this!");
             finalBreadChoice.add(randomSelection);
+
         } else {
             System.out.println("See you next time your stomach growls :)");
 
         }
-            //System.out.println(finalBreadChoice); so, it's printing the index AND the random selection for G---is this ok? (probably not)
     }
 
-    public String getRye() {
-        return rye;
-    }
 
-    public String getWholeWheat() {
-        return wholeWheat;
-    }
-
-    public String getWhite() {
-        return white;
-    }
-
-    public String getHoneyWheat() {
-        return honeyWheat;
-    }
-
-    public String getFocaccia() {
-        return focaccia;
-    }
-
-    public String getSourDough() {
-        return sourDough;
-    }
-
+    //getter
     public ArrayList getFinalBreadChoice() {
         return finalBreadChoice;
     }

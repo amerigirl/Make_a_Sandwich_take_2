@@ -29,7 +29,7 @@ public class Meat {
         this.roastBeef = roastBeef;
     }
 
-
+    //random choice of meat
     public String pickRandomMeats(){
 
         final String [] meatChoices = {"veggieMeat", "salami", "turkey", "ham", "pastrami", "prosciutto", "roastBeef"};
@@ -40,20 +40,9 @@ public class Meat {
 
         return meatChoices[index];
 
-        //how do I stop the random selection from repeating?? (change in the randomCondiments method)
-        //possible solution: int count=0;
-        //List<Integer> list=new ArrayList<Integer>();
-        //    while(count<50){
-        //        int num=random.nextInt(50);
-        //            if(!list.contains(num)){
-        //                list.add(num);
-        //                ++count;
-        //            }
-        //    }
-
-        //https://stackoverflow.com/questions/16284894/java-random-generator-without-repeat
     }
 
+    //Meat menu and user choice
     public void showMeatsMenu(){
 
         Scanner scanner = new Scanner(System.in);
@@ -83,7 +72,7 @@ public class Meat {
 
         if (userMeatChoice == 'A') {
             System.out.println("\n Clean protein!");
-            finalMeatChoices.add("VeggieMeat");
+            finalMeatChoices.add("Veggie Meat");
 
         } else if (userMeatChoice == 'B') {
             System.out.println("You've got Salami!");
@@ -107,7 +96,7 @@ public class Meat {
 
         } else if (userMeatChoice == 'G') {
             System.out.println("Roast Beef is always a safe choice :)");
-            finalMeatChoices.add("roastBeef");
+            finalMeatChoices.add("Roast Beef");
 
         } else if (userMeatChoice == 'H') {
 
@@ -131,43 +120,11 @@ public class Meat {
 
         }
 
-
     }
 
-
-    public String getVeggieMeat() {
-        return veggieMeat;
-    }
-
-    public String getSalami() {
-        return salami;
-    }
-
-    public String getTurkey() {
-        return turkey;
-    }
-
-    public String getHam() {
-        return ham;
-    }
-
-    public String getPastrami() {
-        return pastrami;
-    }
-
-    public String getProsciutto() {
-        return prosciutto;
-    }
-
-    public String getRoastBeef() {
-        return roastBeef;
-    }
-
+    //getter
     public ArrayList getFinalMeatChoices() {
         return finalMeatChoices;
     }
 
-    //we need to be able to randomly choose a type of meat
-    //we also need to be able to choose from a list
-    //is there a way to call a list and then have people choose as well with the randomizer?
 }

@@ -40,7 +40,7 @@ public class Cheese {
         return cheeseChoices[index];
     }
 
-
+    //cheese menu
     public void showCheeseMenu(){
 
         Scanner scanner = new Scanner(System.in);
@@ -85,7 +85,7 @@ public class Cheese {
 
         } else if (userCheeseChoice == 'E') {
             System.out.println("Mozzarella--my childhood love, great choice! \nLet's add some condiments to this!");
-            finalCheeseChoice.add("Mozzarrella");
+            finalCheeseChoice.add("Mozzarella");
 
         } else if (userCheeseChoice == 'F') {
             System.out.println("Nothing beats honey and goat cheese! \nLet's add some condiments to this!");
@@ -104,30 +104,7 @@ public class Cheese {
 
     }
 
-    public String getAmericanCheddar() {
-        return americanCheddar;
-    }
-
-    public String getProvolone() {
-        return provolone;
-    }
-
-    public String getSwiss() {
-        return swiss;
-    }
-
-    public String getSmokedGouda() {
-        return smokedGouda;
-    }
-
-    public String getMozzarella() {
-        return mozzarella;
-    }
-
-    public String getHoneyGoatCheese() {
-        return honeyGoatCheese;
-    }
-
+    //getter
     public ArrayList getFinalCheeseChoice() {
         return finalCheeseChoice;
     }

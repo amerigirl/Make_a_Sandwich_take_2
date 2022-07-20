@@ -1,5 +1,6 @@
 package com.company;
 
+import javax.management.StringValueExp;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -27,20 +28,19 @@ public class Condiments {
 
     }
 
-
+    //random condiment choice
     public String pickRandomCondiments(){
 
         final String [] condimentChoices = {"Mayo", "Mustard", "Ranch", "Hot Sauce", "Cranberry Sauce"};
         Random randomPick = new Random();
         int index = randomPick.nextInt(condimentChoices.length);
         finalCondimentChoice.add(index); //user doesn't see this.  Adds final choice to the arrayList for building the sandwich
-
         System.out.println(condimentChoices[index]);
 
         return condimentChoices[index];
     }
 
-
+    //condiment menu for user
     public void showCondimentsMenu(){
 
         Scanner scanner = new Scanner(System.in);
@@ -81,7 +81,7 @@ public class Condiments {
 
         } else if (userCheeseChoice == 'D') {
             System.out.println("You've got hot sauce!");
-            finalCondimentChoice.add("hot sauce");
+            finalCondimentChoice.add("Hot Sauce");
 
         } else if (userCheeseChoice == 'E') {
             System.out.println("You've got cranberry sauce");
@@ -112,26 +112,7 @@ public class Condiments {
 
     }
 
-    public String getMayo() {
-        return mayo;
-    }
-
-    public String getMustard() {
-        return mustard;
-    }
-
-    public String getRanch() {
-        return ranch;
-    }
-
-    public String getHotSauce() {
-        return hotSauce;
-    }
-
-    public String getCranberrySauce() {
-        return cranberrySauce;
-    }
-
+    //getter
     public ArrayList getFinalCondimentChoice() {
         return finalCondimentChoice;
     }
