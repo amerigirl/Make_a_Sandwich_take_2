@@ -17,6 +17,7 @@ public class Meat {
     private final ArrayList<Object> finalMeatChoices = new ArrayList<>();
 
 
+
     //constructor for Meat
 
     Meat(String veggieMeat, String salami, String turkey, String ham, String pastrami, String prosciutto, String roastBeef){
@@ -36,10 +37,7 @@ public class Meat {
         final String [] meatChoices = {"veggieMeat", "salami", "turkey", "ham", "pastrami", "prosciutto", "roastBeef"};
         Random randomPick = new Random();
         int index = randomPick.nextInt(meatChoices.length);
-
-        finalMeatChoices.add(String.valueOf(index)); //user doesn't see this.  Adds final choice to the arrayList for building the sandwich
-        //System.out.println(meatChoices[index]);
-
+        finalMeatChoices.add(index); //user doesn't see this.  Adds final choice to the arrayList for building the sandwich
         return String.valueOf(index);
 
     }
@@ -102,13 +100,18 @@ public class Meat {
 
         } else if (userMeatChoice == 'H') {
 
-
             System.out.println("Yay! You hit the jackpot with: " + "\n");
+            String rPick1;
+            String rPick2;
+
+            rPick1 = pickRandomMeats();
+            rPick2 = pickRandomMeats();
+
+            String allChoices = rPick1 + ", and " + rPick2;  //this creates one field (instead of 3) so the choice is added to an arrayList
+            finalMeatChoices.add(allChoices);
+            System.out.println(allChoices);
 
 
-            String allChoices = pickRandomMeats() + ", and " + pickRandomMeats();  //this creates one field (instead of 3) so the choice is added to an arrayList
-            //finalMeatChoices.add(allChoices);
-            //System.out.println(allChoices);
         } else {
             System.out.println("See you next time your stomach growls :)");
 

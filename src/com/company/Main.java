@@ -36,20 +36,19 @@ public class Main {
             //we need a small break here--2-3 seconds
             sampleVeggie.showVeggiesMenu();
 
-
         System.out.println("\n\nOk, you've made all of your choices, now, let's put this sandwich together.  Here's your ingredient list: ");
+
 
         //build the sandwich list using string buffers(at least until you find a simpler way :-))
 
-                    System.out.println("\nMeat    =  " + sampleMeat.getFinalMeatChoices());
+        StringBuffer meatString = new StringBuffer();
+            for (Object s : sampleMeat.getFinalMeatChoices()) {
+                meatString.append(s);
+                String finalMeatString = String.valueOf(meatString); //not something we should see
+                System.out.println("\nMeat    =  " + finalMeatString);
+                break;
 
-
-//        StringBuffer meatString = new StringBuffer();
-//            for (Object s : sampleMeat.getFinalMeatChoices()) {
-//                meatString.append(s);
-//                String finalMeatString = String.valueOf(meatString); //not something we should see
-//                System.out.println("\nMeat    =  " + finalMeatString);
-//            }
+            }
 
         StringBuffer breadString = new StringBuffer();
             for (Object s : sampleBread.getFinalBreadChoice()) {
