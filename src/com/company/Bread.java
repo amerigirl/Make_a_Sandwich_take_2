@@ -33,9 +33,9 @@ public class Bread {
         Random randomPick = new Random();
         int index = randomPick.nextInt(breadChoices.length);
         finalBreadChoice.add(index);
-        System.out.println(breadChoices[index]);
+        //System.out.println(breadChoices[index]);
 
-        return breadChoices[index];
+        return String.valueOf(index);
     }
 
 
@@ -94,9 +94,11 @@ public class Bread {
 
         } else if (userBreadChoice == 'G') {
 
+            String randomSelection = "";
             System.out.println("Yay! You hit the jackpot with: ");
-            String randomSelection = pickRandomBread();
-                System.out.println("\nLet's add some cheese to this!");
+            randomSelection = pickRandomBread();
+
+                System.out.println("Let's add some cheese to this!");
             finalBreadChoice.add(randomSelection);
 
         } else {

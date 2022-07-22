@@ -34,7 +34,7 @@ public class Veggies {
     Random randomPick = new Random();
     int index = randomPick.nextInt(veggieChoices.length);
         finalVeggieChoices.add(index); //user doesn't see this.  Adds final choice to the arrayList for building the sandwich
-        System.out.println(veggieChoices[index]);
+        //System.out.println(veggieChoices[index]); is this needed?
 
         return veggieChoices[index];
 

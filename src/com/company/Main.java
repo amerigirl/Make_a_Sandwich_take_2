@@ -40,24 +40,28 @@ public class Main {
         System.out.println("\n\nOk, you've made all of your choices, now, let's put this sandwich together.  Here's your ingredient list: ");
 
         //build the sandwich list using string buffers(at least until you find a simpler way :-))
-        StringBuffer meatString = new StringBuffer();
-            for (Object s : sampleMeat.getFinalMeatChoices()) {
-                meatString.append(s);
-                String finalMeatString = meatString.toString();
-                System.out.println("\nMeat    =  " + finalMeatString);
-            }
+
+                    System.out.println("\nMeat    =  " + sampleMeat.getFinalMeatChoices());
+
+
+//        StringBuffer meatString = new StringBuffer();
+//            for (Object s : sampleMeat.getFinalMeatChoices()) {
+//                meatString.append(s);
+//                String finalMeatString = String.valueOf(meatString); //not something we should see
+//                System.out.println("\nMeat    =  " + finalMeatString);
+//            }
 
         StringBuffer breadString = new StringBuffer();
             for (Object s : sampleBread.getFinalBreadChoice()) {
                 breadString.append(s);
-                String finalBreadString = breadString.toString();
+                String finalBreadString = String.valueOf(breadString);
                 System.out.println("Bread   =  " + finalBreadString);
             }
 
         StringBuffer cheeseString = new StringBuffer();
             for (Object s : sampleCheese.getFinalCheeseChoice()) {
                 cheeseString.append(s);
-                String finalCheeseString = cheeseString.toString();
+                String finalCheeseString = String.valueOf(cheeseString);
                 System.out.println("Cheese  =  " + finalCheeseString);
             }
 
@@ -65,14 +69,14 @@ public class Main {
         StringBuffer veggieString = new StringBuffer();
             for (Object s : sampleVeggie.getFinalVeggieChoices()) {
                 veggieString.append(s);
-                String finalVeggieString = veggieString.toString();
+                String finalVeggieString = String.valueOf(veggieString);
                 System.out.println("Veggies =  " + finalVeggieString);
             }
 
         StringBuffer condimentString = new StringBuffer();
             for (Object s : sampleCondiments.getFinalCondimentChoice()) {
                 condimentString.append(s);
-                String finalCondimentString = condimentString.toString();
+                String finalCondimentString = String.valueOf(condimentString);
                 System.out.println("Condim. =  " + finalCondimentString);
             }
 
